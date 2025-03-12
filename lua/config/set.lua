@@ -12,8 +12,11 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
-vim.opt.undofile = true
+
+if not vim.fn.has('win32') then
+    vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+    vim.opt.undofile = true
+end
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
