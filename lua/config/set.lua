@@ -32,3 +32,5 @@ vim.opt.smoothscroll = true
 vim.opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
 vim.opt.foldmethod = 'expr'
 vim.opt.foldtext = ''
+
+vim.diagnostic.config({virtual_lines=true})
